@@ -7,7 +7,11 @@ const  SpanStyle = styled.span`
   cursor: pointer;
 `
 const SizeInput = styled.input`
-  display: none;
+
+  display: ${props => props.$show ? {display: 'hidden'} :{display: 'visible'}};
+
+  
+}
 `
 
 const Size = ({ name, span, type, handleChange }) => {
@@ -15,7 +19,7 @@ const Size = ({ name, span, type, handleChange }) => {
   return (
     <>
       <label htmlFor={name}>
-        <input type={type} name={name} id={name} onChange={handleChange} />
+        <SizeInput $show type={type} name={name} id={name} onChange={handleChange} />
         <SpanStyle>{span}</SpanStyle>
       </label>
     </>
@@ -26,7 +30,7 @@ export const Color = ({ name, type, className, id, handleChange }) => {
   return (
     <>
       <label htmlFor={name}>
-        <input type={type} name={name} id={id} onChange={handleChange}/>
+        <SizeInput type={type} name={name} id={id} onChange={handleChange}/>
         <SpanStyle className={className}></SpanStyle>
       </label>
     </>

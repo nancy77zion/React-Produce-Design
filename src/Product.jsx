@@ -14,7 +14,7 @@ const ControlBtn = styled.div`
   bottom: 40px;
   right: 20px;
 `
-const Btn = styled.span.attrs(() => ({tabIdex: 0}))`
+const Btn = styled.span`
   display: block;
   width: 10px;
   height: 10px;
@@ -24,7 +24,7 @@ const Btn = styled.span.attrs(() => ({tabIdex: 0}))`
   cursor: pointer;
 
   &.active {
-    //background: blue;
+    background: blue;
   }
 `
 const Img = styled.img`
