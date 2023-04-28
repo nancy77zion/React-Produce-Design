@@ -13,6 +13,7 @@ const Container = styled.div`
 `
 const ProductContainer = styled.div`
   width: 90%;
+  height: ;
   max-width: 750px;
   display: flex;
 `

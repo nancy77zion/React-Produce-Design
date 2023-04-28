@@ -10,23 +10,23 @@ const SizeInput = styled.input`
   display: none;
 `
 
-const Size = ({ name, span, type, }) => {
+const Size = ({ name, span, type, handleChange }) => {
 
   return (
     <>
       <label htmlFor={name}>
-        <SizeInput type={type} name={name} id={name} />
+        <input type={type} name={name} id={name} onChange={handleChange} />
         <SpanStyle>{span}</SpanStyle>
       </label>
     </>
   )
 }
 
-export const Color = ({ name, type,className, id }) => {
+export const Color = ({ name, type, className, id, handleChange }) => {
   return (
     <>
       <label htmlFor={name}>
-        <input type={type} name={name} id={id} />
+        <input type={type} name={name} id={id} onChange={handleChange}/>
         <SpanStyle className={className}></SpanStyle>
       </label>
     </>
