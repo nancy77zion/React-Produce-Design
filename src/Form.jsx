@@ -41,7 +41,7 @@ const Form = (props) => {
       </ColorSelect>
       <Quantity>
        <Para $width>Quantity</Para>
-       <InputStyle type="number" name="quatity" value="1" onChange={handleChange}/>
+       <InputStyle type="number" name="1" value="1"/>
       </Quantity>
       <Button>Buy Now</Button>
     </FormStyle>

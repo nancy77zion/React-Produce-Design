@@ -1,5 +1,8 @@
 import { useState } from 'react'
 import styled from 'styled-components'
+import image1 from './images/image1.png';
+import image2 from './images/image2.png';
+import image3 from './images/image3.png';
 
 const ProductPics = styled.div`
   flex-basis: 47%;
@@ -27,6 +30,8 @@ const Btn = styled.span`
     background: blue;
   }
 `
+ 
+
 const Img = styled.img`
   width: 100%;
   height: 100%;
@@ -35,11 +40,13 @@ const Img = styled.img`
 
 const Product = () => {
 
-  const [imgSrc, setImgSrc] = useState("/images/image1.png");
-  const [btn, setBtn] = useState()
+
+  const [imgSrc, setImgSrc] = useState({image1});
+
   
   const handleButtonClick = (newImgSrc) => {
     setImgSrc(newImgSrc);
+
   };
 
   return (
@@ -49,9 +56,9 @@ const Product = () => {
           alt='product-image'
            />
         <ControlBtn>
-          <Btn className='btn active' onClick={() => handleButtonClick("/images/image1.png")}></Btn>
-          <Btn className='btn' onClick={() => handleButtonClick("/images/image2.png")}></Btn>
-          <Btn className='btn' onClick={() => handleButtonClick("/images/image3.png")}></Btn>
+          <Btn className='active' onClick={() => handleButtonClick(image1)}></Btn>
+          <Btn  onClick={() => handleButtonClick(image2)}></Btn>
+          <Btn  onClick={() => handleButtonClick(image3)}></Btn>
         </ControlBtn>
     </ProductPics>
   )
